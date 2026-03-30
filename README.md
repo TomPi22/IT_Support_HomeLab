@@ -60,5 +60,31 @@ Executed `ufw status verbose` to verify the active ruleset. The firewall is now 
 *(Active Firewall Ruleset Proof)*
 > <img width="819" height="584" alt="image" src="https://github.com/user-attachments/assets/5a41b5f1-8b0a-4d6a-b552-996ebed6e971" />
 
+Secure and auditable server.
 
 
+## Project 3: ITIL Incident Management & Network Troubleshooting
+
+**1. Scenario (Business Problem)**
+A high-priority ticket was opened by the Field Operations team. An agronomist working remotely reported a sudden loss of connection to the `Field_Reports` shared folder. The business impact was high as daily soil analysis uploads were halted.
+
+**2. Troubleshooting Methodology**
+Following a logical bottom-up approach (OSI Model):
+* **Layer 3 (Network):** Verified if the server was reachable via ICMP (Ping). The server was responding, isolating the issue from a general network outage.
+* **Layer 4 (Transport):** Tested the specific SMB port (445) connectivity using `Netcat` (`nc -zv`). The connection was actively refused.
+* **Security Audit:** Checked the host-based firewall (`ufw status numbered`). 
+
+**3. Action (Resolution)**
+Identified an erroneous "DENY" rule blocking the Samba service ports. 
+* Deleted the misconfigured firewall rule.
+* Reloaded the firewall policies.
+* Re-tested port 445 connectivity, which returned a `succeeded` status.
+
+*(Troubleshooting Commands & Firewall Audit)*
+> <img width="815" height="576" alt="image" src="https://github.com/user-attachments/assets/177003e3-4fe6-412e-b0f8-123d9c1c17b2" />
+
+**4. Conclusion / Test**
+The Incident was resolved within the SLA. The field team successfully re-authenticated to the Samba share, confirming service restoration. 
+
+*(Service Restored Proof)*
+> <img width="920" height="588" alt="image" src="https://github.com/user-attachments/assets/dac5a80e-1b90-4340-880f-0bdf5a1f5dd1" />
