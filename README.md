@@ -88,3 +88,33 @@ The Incident was resolved within the SLA. The field team successfully re-authent
 
 *(Service Restored Proof)*
 > <img width="920" height="588" alt="image" src="https://github.com/user-attachments/assets/dac5a80e-1b90-4340-880f-0bdf5a1f5dd1" />
+
+
+## Project 4: Secure Remote Access - WireGuard VPN Implementation
+
+**1. Scenario (Business Problem)**
+The AgTech field team required secure, encrypted access to the internal file server while traveling or working from untrusted public networks (e.g., airports, cafes). Exposing the Samba server directly to the internet was a critical security risk. 
+
+**2. Topology**
+* **VPN Protocol:** WireGuard (Layer 3)
+* **Encryption:** ChaCha20 for symmetric encryption, Curve25519 for key exchange.
+* **Network:** VPN Subnet `10.0.0.0/24`
+* **Firewall (UFW):** UDP Port `51820` opened for encrypted tunnel traffic.
+
+**3. Action (Implementation Steps)**
+* Installed WireGuard tools on the Ubuntu Server.
+* Generated public and private cryptographic keys.
+* Created the WireGuard interface configuration file (`wg0.conf`), defining the server's private IP (`10.0.0.1`) and listening port (`51820`).
+* Updated the host-based firewall (UFW) to accept incoming UDP traffic on the VPN port.
+* Initialized the VPN interface using `wg-quick`.
+
+*(Cryptographic Keys & Config)*
+> <img width="954" height="582" alt="image" src="https://github.com/user-attachments/assets/1ce6a864-924e-4441-bdba-cf849dbff9d2" />
+
+
+**4. Conclusion / Test**
+Executed `wg show` to audit the active VPN tunnel. The interface `wg0` is successfully running, securely listening for authenticated client handshakes.
+
+*(Active VPN Interface Proof)*
+> <img width="955" height="578" alt="image" src="https://github.com/user-attachments/assets/f5cd3cc2-c170-4a57-9518-ce5986359885" />
+
