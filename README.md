@@ -146,3 +146,37 @@ The monitoring dashboard is active and collecting telemetry. This provides the "
 
 *(Active NOC Dashboard Proof)*
 <img width="1169" height="902" alt="image" src="https://github.com/user-attachments/assets/1aadc406-2463-4328-8ce7-a2834a92330c" />
+
+
+## Project 6: Cloud Identity & Access Management (IAM) - Microsoft Entra ID
+
+**1. Scenario (Business Problem)**
+As the AgTech company expanded operations to Dublin, a new external Security Auditor joined the team. To comply with Zero Trust architecture and the Principle of Least Privilege (PoLP), this user required a cloud-native identity with strict read-only access to audit the Azure environment, preventing any unauthorized modifications to production resources.
+
+**2. Tech Stack & Frameworks**
+* **Cloud Provider:** Microsoft Azure
+* **Identity Provider (IdP):** Microsoft Entra ID (formerly Azure AD)
+* **Security Model:** Role-Based Access Control (RBAC)
+* **Compliance:** Zero Trust / AZ-900 & AZ-500 Identity Standards
+
+**3. Action (Implementation Steps)**
+* Accessed the Microsoft Entra ID tenant in the Azure Portal.
+* Provisioned a new cloud-only user (`dublin_auditor`).
+* Generated a secure, auto-generated initial password.
+* Applied Azure RBAC at the Directory level by assigning the **"Global Reader"** role, ensuring the user can view all administrative settings and configurations without edit capabilities.
+
+*(Entra ID User Provisioning & RBAC Assignment)*
+<img width="1706" height="786" alt="image" src="https://github.com/user-attachments/assets/0accdf5d-a48d-41a0-80ca-00b822ef7e15" />
+
+*(Successfully navigated Azure Security Defaults by provisioning Microsoft Authenticator MFA for the auditor account)*
+<img width="579" height="730" alt="image" src="https://github.com/user-attachments/assets/d77ac65a-8805-492e-9ba9-80c96cf3bdc7" />
+<img width="1769" height="886" alt="image" src="https://github.com/user-attachments/assets/e8b70fe9-a6d6-464c-9b56-d0f7a662a9d3" />
+
+
+
+**4. Conclusion**
+The auditor's identity was successfully created and constrained by RBAC. A login simulation verified that the user can access the Azure Portal but is explicitly denied from creating, deleting, or modifying any resources, effectively mitigating insider threats and accidental misconfigurations.
+
+*(Global Reader Access Validation Proof)*
+<img width="1890" height="815" alt="image" src="https://github.com/user-attachments/assets/69da4f8c-a090-4aff-a7ec-c6681b64e791" />
+
