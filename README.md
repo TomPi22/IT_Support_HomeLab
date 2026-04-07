@@ -118,3 +118,31 @@ Executed `wg show` to audit the active VPN tunnel. The interface `wg0` is succes
 *(Active VPN Interface Proof)*
 > <img width="955" height="578" alt="image" src="https://github.com/user-attachments/assets/f5cd3cc2-c170-4a57-9518-ce5986359885" />
 
+
+## Project 5: Enterprise Monitoring & Compliance Infrastructure (Zabbix)
+
+**1. Scenario & Compliance Context (GDPR & Security+)**
+To comply with GDPR "Availability" requirements and CompTIA Security+ monitoring standards, I implemented a centralized Network Operations Center (NOC) using Zabbix. This setup ensures real-time visibility into system health, preventing data downtime—a critical aspect of technical data protection (Art. 32 GDPR).
+
+**2. Tech Stack**
+* **Monitoring Engine:** Zabbix 6.0 LTS
+* **Database:** MariaDB (Relational Data Store)
+* **Web Server:** Apache with PHP optimization
+* **Security Frameworks:** Security+ (Performance Monitoring), GDPR (Availability/Resilience)
+
+**3. Action (Implementation Steps)**
+* Provisioned a MariaDB instance with a dedicated, non-root user for database security.
+* Ingested the Zabbix SQL schema to support historical data retention.
+* Configured the Zabbix Server to monitor local system resources (CPU, Memory, Network Latency).
+* Hardened the service by managing standard Linux permissions and service states via `systemctl`.
+
+*(Zabbix Initial Setup & Database Connection)*
+<img width="1163" height="895" alt="image" src="https://github.com/user-attachments/assets/df60dd7c-07b3-4f97-986f-6dfa4de59dca" />
+
+
+
+**4. Conclusion / Compliance Audit**
+The monitoring dashboard is active and collecting telemetry. This provides the "Continuous Monitoring" capability required by SOC (Security Operations Center) roles in the EU market, allowing for rapid incident response as defined in the ITIL and Security+ domains.
+
+*(Active NOC Dashboard Proof)*
+<img width="1169" height="902" alt="image" src="https://github.com/user-attachments/assets/1aadc406-2463-4328-8ce7-a2834a92330c" />
