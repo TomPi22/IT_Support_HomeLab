@@ -180,3 +180,32 @@ The auditor's identity was successfully created and constrained by RBAC. A login
 *(Global Reader Access Validation Proof)*
 <img width="1890" height="815" alt="image" src="https://github.com/user-attachments/assets/69da4f8c-a090-4aff-a7ec-c6681b64e791" />
 
+
+## Project 7: Cloud SIEM & Threat Detection - Microsoft Sentinel & KQL
+
+**1. Scenario (Business Problem)**
+While RBAC policies successfully prevented unauthorized resource creation, the Security Operations Center (SOC) lacked visibility into these blocked attempts. The AgTech company needed a centralized SIEM to ingest cloud activity logs and automatically trigger incidents when suspicious or unauthorized actions occurred.
+
+**2. Tech Stack & Frameworks**
+* **Cloud SIEM:** Microsoft Azure Sentinel
+* **Log Storage:** Log Analytics Workspace
+* **Query Language:** KQL (Kusto Query Language)
+* **Threat Detection:** Custom Analytics Rules mapping to the MITRE ATT&CK framework (Execution/Privilege Escalation).
+
+**3. Action (Implementation Steps)**
+* Activated Microsoft Sentinel and provisioned a Log Analytics Workspace in the EU region (North Europe).
+* Configured the **Azure Activity** Data Connector to ingest subscription-level events in real-time.
+* Authored a custom KQL (Kusto Query Language) query to hunt for "Access Denied" events caused by unauthorized users attempting to provision infrastructure.
+* Deployed an Analytics Rule to automatically convert these specific KQL matches into high-severity SOC Incidents.
+
+*(Sentinel KQL Query & Analytics Rule Configuration)*
+<img width="1867" height="906" alt="image" src="https://github.com/user-attachments/assets/85f34752-754c-431e-943a-da297b85e73b" />
+
+*(Successfully navigated the new Microsoft Unified SecOps Portal to deploy the Azure Activity solution)*
+<img width="1869" height="899" alt="image" src="https://github.com/user-attachments/assets/9f7d6ab4-6ea9-46fb-a646-ab7ce0b18368" />
+
+**4. Conclusion / SOC Simulation**
+Simulated an insider threat scenario where the restricted `dublin_auditor` attempted to deploy a Virtual Machine. The RBAC policy blocked the action, the Azure Activity log recorded the failure, and Sentinel successfully ingested the log, triggering a real-time Incident in the SOC dashboard.
+
+*(Sentinel Incident Triggered Proof)*
+<img width="1893" height="906" alt="image" src="https://github.com/user-attachments/assets/1343c856-a980-49bc-9c5a-87e22dbeb7b1" />
