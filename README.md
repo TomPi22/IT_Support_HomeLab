@@ -1,4 +1,23 @@
-# IT_Support_HomeLab
+# IT Infrastructure, NOC & Security Foundations
+
+A hands-on portfolio documenting the on-premises infrastructure, 
+network security, and monitoring foundations required for 
+Cloud Security and SOC Analyst roles in the EU market.
+
+This repository covers Linux hardening, host-based security controls, 
+enterprise monitoring (NOC), VPN architecture, and the foundational 
+cloud identity bridge to the Azure SecOps portfolio.
+
+Aligned with CompTIA Security+, GDPR (Art. 32), ITIL v4, and 
+serving as the on-premises foundation for AZ-500 and SC-200 
+certification paths.
+
+> 🔗 For advanced cloud security architecture, SIEM/XDR operations, 
+and Zero Trust implementations, see the 
+[Azure Cloud Security Operations repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
+
+
+
 
 ## Fase 1: Cloud Security Fundamentals (Cybersecurity Beginner)
 ## Project 1: Linux File Server Implementation with Secure Role-Based Access Control (RBAC)
