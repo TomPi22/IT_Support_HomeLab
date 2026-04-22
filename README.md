@@ -181,7 +181,7 @@ The auditor's identity was successfully created and constrained by RBAC. A login
 *(Global Reader Access Validation Proof)*
 <img width="1890" height="815" alt="image" src="https://github.com/user-attachments/assets/69da4f8c-a090-4aff-a7ec-c6681b64e791" />
 
-
+## project-7
 ## Project 7: Cloud SIEM & Threat Detection - Microsoft Sentinel & KQL
 
 **1. Scenario (Business Problem)**
