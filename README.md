@@ -22,6 +22,7 @@ and Zero Trust implementations, see the
 ## Fase 1: Cloud Security Fundamentals (Cybersecurity Beginner)
 ## Project 1: Linux File Server Implementation with Secure Role-Based Access Control (RBAC)
 
+
 **1. Scenario (Business Problem)**
 An AgTech company needed a central file server to share documents. The company has two main departments: **Finance** and **Field Operations** (Agronomists). 
 The business rule is strict: 
@@ -139,7 +140,29 @@ Executed `wg show` to audit the active VPN tunnel. The interface `wg0` is succes
 > <img width="955" height="578" alt="image" src="https://github.com/user-attachments/assets/f5cd3cc2-c170-4a57-9518-ce5986359885" />
 
 
+## 🖥️ Project 5: Enterprise NOC Deployment (Zabbix 7.0 LTS & MariaDB)
 
+**Objective:** Architect and deploy a centralized Network Operations Center (NOC) to establish continuous observability, telemetry ingestion, and event management across hybrid infrastructure.
+
+**Framework & Role Alignment:**
+* **ITIL v4:** Event Management & Incident Identification.
+* **NIST CSF:** Detect (DE.AE) - Anomalies and Events.
+
+### Execution
+To simulate a production-grade on-premises foundation before bridging to the cloud, a full monitoring solution was deployed on Ubuntu Server 24.04.
+
+1. **Infrastructure & Network Hardening:** The server was configured with a dedicated Bridged Network adapter to operate natively on the local LAN. A critical kernel-level bypass (GRUB bootloader manipulation) was executed to regain root access and restructure permissions during deployment.
+2. **Database Resilience & Hardening:** MariaDB was deployed as the backend engine. To secure the database, a strict hardening script was executed (disabling remote root login, removing anonymous access). A "Clean Slate" architectural approach was utilized to drop and rebuild the SQL schemas, ensuring data integrity for the Zabbix telemetry.
+3. **Application & Telemetry Pipeline:** Zabbix 7.0 LTS was installed. Overcoming hypervisor clipboard encoding conflicts, the backend database was successfully seeded with the Zabbix schema. The Apache/PHP frontend was then isolated, debugged, and launched to establish the web management console.
+
+> *Proof of Architecture: Successful deployment of Zabbix 7.0 Web Frontend and Active NOC Dashboard.*
+
+<img width="1478" height="966" alt="Captura de tela 2026-05-07 190446" src="https://github.com/user-attachments/assets/e10f6ace-953d-40f2-a15f-beee4d427f59" />
+
+<img width="1917" height="1032" alt="Captura de tela 2026-05-07 192334" src="https://github.com/user-attachments/assets/40edabaa-17ad-4a6d-b4fc-b61574dd9848" />
+
+
+**Skills Applied:** Linux Server Administration, Bare-Metal Troubleshooting (GRUB), Database Hardening (MariaDB), Zabbix 7.0 LTS, Network Routing, ITIL Event Management.
 
 
 ## Project 6: Cloud Identity & Access Management (IAM) - Microsoft Entra ID
