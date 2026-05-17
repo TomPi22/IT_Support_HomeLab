@@ -36,11 +36,6 @@ certification paths.
 🚀 **Next Step in the Roadmap:**
 * For advanced Cloud Security Architecture (Projects 8 through 24), proceed to the [Azure Cloud Security Operations Repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
 
-
-> 🔗 For advanced cloud security architecture, SIEM/XDR operations, 
-and Zero Trust implementations, see the 
-[Azure Cloud Security Operations repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
-
 |
 |
 |
