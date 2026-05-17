@@ -18,7 +18,7 @@ and Zero Trust implementations, see the
 
 
 
-Cloud Security Fundamentals (Cybersecurity Beginner)
+## Cloud Security Fundamentals (Cybersecurity Beginner)
 ## Project 1: Linux File Server Implementation with Secure Role-Based Access Control (RBAC)
 
 
