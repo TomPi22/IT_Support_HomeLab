@@ -148,7 +148,7 @@ Executed `wg show` to audit the active VPN tunnel. The interface `wg0` is succes
 * **ITIL v4:** Event Management & Incident Identification.
 * **NIST CSF:** Detect (DE.AE) - Anomalies and Events.
 
-### Execution
+### Phase 1: Execution
 To simulate a production-grade on-premises foundation before bridging to the cloud, a full monitoring solution was deployed on Ubuntu Server 24.04.
 
 1. **Infrastructure & Network Hardening:** The server was configured with a dedicated Bridged Network adapter to operate natively on the local LAN. A critical kernel-level bypass (GRUB bootloader manipulation) was executed to regain root access and restructure permissions during deployment.
@@ -163,6 +163,18 @@ To simulate a production-grade on-premises foundation before bridging to the clo
 
 
 **Skills Applied:** Linux Server Administration, Bare-Metal Troubleshooting (GRUB), Database Hardening (MariaDB), Zabbix 7.0 LTS, Network Routing, ITIL Event Management.
+
+### Phase 2: Hybrid Endpoint Telemetry Integration (Windows Agent)
+
+To prove cross-platform monitoring capabilities and hybrid network routing, the host physical machine (Windows) was integrated into the Linux-based NOC.
+
+1. **Agent Deployment:** Zabbix Agent was installed on the Windows endpoint.
+2. **Zero Trust & Network Isolation:** To ensure secure telemetry transmission across the NAT boundary, explicit Allow-List (Whitelist) policies were configured within the `zabbix_agentd.conf` file, strictly permitting traffic only from the NOC's designated gateway IP (`10.0.2.15`).
+3. **Firewall Exception:** A precise inbound rule was injected via PowerShell to open TCP port 10050, allowing active/passive polling.
+4. **Validation:** The endpoint was successfully registered via the Zabbix Web Console utilizing the NAT gateway loopback (`10.0.2.2`), immediately establishing a green ZBX availability status and streaming live telemetry (CPU, Memory, Disk I/O).
+
+> *Proof of Execution: Active Dual-Telemetry on Zabbix NOC.*
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/351d428d-40d3-4c18-8842-785704fa368b" />
 
 
 ## Project 6: Cloud Identity & Access Management (IAM) - Microsoft Entra ID
