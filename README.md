@@ -15,9 +15,11 @@ certification paths.
 > 🔗 For advanced cloud security architecture, SIEM/XDR operations, 
 and Zero Trust implementations, see the 
 [Azure Cloud Security Operations repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
+> 
 |
 |
 |
+
 ## Cloud Security Fundamentals (Cybersecurity Beginner)
 ## Project 1: Linux File Server Implementation with Secure Role-Based Access Control (RBAC)
 
