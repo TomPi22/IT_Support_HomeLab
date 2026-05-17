@@ -12,10 +12,35 @@ Aligned with CompTIA Security+, GDPR (Art. 32), ITIL v4, and
 serving as the on-premises foundation for AZ-500 and SC-200 
 certification paths.
 
+
+## 🗺️ Strategic Roadmap & Project Index
+
+*Click on a project to jump directly to the technical implementation.*
+
+📁 **Phase 1: Core IT Infrastructure & Local Security (Foundations)**
+
+* [Project 1: Linux File Server Implementation with Secure Role-Based Access Control (RBAC)](#project-1-linux-file-server-implementation-with-secure-role-based-access-control-rbac)
+* [Project 2: Network Security - Host-Based Firewall (UFW) Implementation](#project-2-network-security---host-based-firewall-ufw-implementation)
+* [Project 3: ITIL Incident Management & Network Troubleshooting](#project-3-itil-incident-management--network-troubleshooting)
+* [Project 4: Secure Remote Access - WireGuard VPN Implementation](#project-4-secure-remote-access---wireguard-vpn-implementation)
+
+📁 **Phase 2: Enterprise Observability & NOC Operations**
+
+* [Project 5: Enterprise NOC Deployment (Zabbix 7.0 LTS & MariaDB)](#️-project-5-enterprise-noc-deployment-zabbix-70-lts--mariadb)
+
+📁 **Phase 3: The Cloud Bridge (IAM & SIEM Fundamentals)**
+
+* [Project 6: Cloud Identity & Access Management (IAM) - Microsoft Entra ID](#project-6-cloud-identity--access-management-iam---microsoft-entra-id)
+* [Project 7: Cloud SIEM & Threat Detection - Microsoft Sentinel & KQL](#project-7-cloud-siem--threat-detection---microsoft-sentinel--kql)
+
+🚀 **Next Step in the Roadmap:**
+* For advanced Cloud Security Architecture (Projects 8 through 24), proceed to the [Azure Cloud Security Operations Repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
+
+
 > 🔗 For advanced cloud security architecture, SIEM/XDR operations, 
 and Zero Trust implementations, see the 
 [Azure Cloud Security Operations repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
-> 
+
 |
 |
 |
