@@ -36,7 +36,7 @@ certification paths.
 🚀 **Next Step in the Roadmap:**
 * For advanced Cloud Security Architecture (Projects 8 through 24), proceed to the [Azure Cloud Security Operations Repository](https://github.com/TomPi22/Azure-Cloud-Security-Operations).
 
-|||
+- - -
 
 ## Cloud Security Fundamentals (Cybersecurity Beginner)
 ## Project 1: Linux File Server Implementation with Secure Role-Based Access Control (RBAC)
